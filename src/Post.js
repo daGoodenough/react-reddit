@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Post extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
+const Post = (props) => {
+  return (
+    <li>
+      <span>{props.post.user} -{props.post.text}</span>
+      <p>{props.post.upvotes}</p>
+      <button onClick={() => {props.upvote(props.index)}} className="btn btn-success">UPVOTE</button>
+    </li>
+  )
 }
 
 export default Post;
